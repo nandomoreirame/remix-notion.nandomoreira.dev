@@ -20,7 +20,7 @@ export function Avatar({
       style={{
         flex: `0 0 ${size}px`,
         height: `${size}px`,
-        width: `${size}px`,
+        width: `100%`,
       }}
     >
       <img className="avatar__image" src={image} alt={alt} width={size} height={size} {...imgProps} />

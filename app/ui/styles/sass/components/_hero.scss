@@ -10,14 +10,30 @@
     @include media(min-width $tablet) {
       align-items: center;
       display: flex;
-      justify-content: center;
       min-height: calc(100vh - 60px);
       padding: 30px 0;
       text-align: left;
+
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__image {
+    @include media(min-width $desktop) {
+      flex: 0 0 220px;
     }
   }
 
   &__content {
+    @include media(min-width $desktop) {
+      margin-left: 30px;
+
+      .socialLinks {
+        left: -10px;
+      }
+    }
+
     h3 {
       color: var(--colors-primary);
       font-size: 1.2rem;

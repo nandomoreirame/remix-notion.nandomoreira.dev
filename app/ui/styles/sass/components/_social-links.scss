@@ -3,17 +3,16 @@
   list-style: none;
   margin: 10px auto;
   padding: 0;
-  max-width: 320px;
+  text-align: center;
+  position: relative;
 
   @include media(min-width $tablet) {
     margin: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   &__item {
     display: inline-block;
+    margin: 0 4px;
   }
 
   &__link {

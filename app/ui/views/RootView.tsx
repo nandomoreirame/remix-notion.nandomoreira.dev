@@ -11,14 +11,14 @@ const MENU_LINKS = [
     title: 'Sobre',
     path: '/sobre',
   },
-  {
-    title: 'Projetos',
-    path: '/projetos',
-  },
-  {
-    title: 'Portfolio',
-    path: '/portfolio',
-  },
+  // {
+  //   title: 'Projetos',
+  //   path: '/projetos',
+  // },
+  // {
+  //   title: 'Portfolio',
+  //   path: '/portfolio',
+  // },
   {
     title: 'Contato',
     path: '/contato',

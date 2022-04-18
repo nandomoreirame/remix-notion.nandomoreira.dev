@@ -7,10 +7,23 @@
 @import "./components/page-header";
 
 .about {
+  flex-direction: column;
+
   @include media(min-width $desktop) {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  // &__image {}
-  // &__content {}
+  &__sidebar {
+    @include media(min-width $desktop) {
+      flex: 0 0 30%;
+    }
+  }
+
+  &__content {
+    @include media(min-width $desktop) {
+      flex: 0 0 65%;
+    }
+  }
 }

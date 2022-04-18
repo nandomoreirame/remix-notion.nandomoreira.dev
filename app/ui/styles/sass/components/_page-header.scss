@@ -39,6 +39,11 @@
     line-height: 1;
     margin-bottom: 1rem;
 
+    // background: linear-gradient(135deg, var(--colors-gray-200) 0%, var(--colors-primary) 100%);
+    // background-size: 100%;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+
     @include media(min-width $tablet) {
       font-size: 3rem;
     }

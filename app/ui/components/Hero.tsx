@@ -17,8 +17,8 @@ export function Hero({ user, content, socialLinks }: HeroProps): React.ReactElem
         <div className="hero__image">
           <Avatar image={user.avatar_url} alt={`Avatar de ${user.name}`} size={220} circle />
         </div>
-        <div>
-          <div className="hero__content" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="hero__content">
+          <div dangerouslySetInnerHTML={{ __html: content }} />
           {socialLinks && <SocialLinks links={socialLinks} />}
         </div>
       </div>

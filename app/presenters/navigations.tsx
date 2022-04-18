@@ -12,14 +12,14 @@ import {
 } from 'react-icons/io5';
 
 const ICONS_DATA = {
-  instagram: <IoLogoInstagram title="Instagram" size={22} />,
-  twitter: <IoLogoTwitter title="twitter" size={22} />,
-  github: <IoLogoGithub title="github" size={22} />,
-  whatsapp: <IoLogoWhatsapp title="whatsapp" size={22} />,
-  linkedin: <IoLogoLinkedin title="linkedin" size={22} />,
-  codepen: <IoLogoCodepen title="codepen" size={22} />,
-  dribbble: <IoLogoDribbble title="dribbble" size={22} />,
-  behance: <IoLogoBehance title="behance" size={22} />,
+  instagram: <IoLogoInstagram title="Instagram" size={32} />,
+  twitter: <IoLogoTwitter title="twitter" size={32} />,
+  github: <IoLogoGithub title="github" size={32} />,
+  whatsapp: <IoLogoWhatsapp title="whatsapp" size={32} />,
+  linkedin: <IoLogoLinkedin title="linkedin" size={32} />,
+  codepen: <IoLogoCodepen title="codepen" size={32} />,
+  dribbble: <IoLogoDribbble title="dribbble" size={32} />,
+  behance: <IoLogoBehance title="behance" size={32} />,
 };
 
 export function formatMenuLinks<T>(database: ContentDatabase): T[] {

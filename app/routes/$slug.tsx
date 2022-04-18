@@ -43,10 +43,10 @@ export async function loader({ params }: LoaderSubmission) {
   const users = await notionService.getUsers<User>();
   const user = users.filter(({ type }) => type === 'person')[0];
 
-  let socialLinks = null;
-  if (page.slug === 'sobre') {
-    socialLinks = await api.getSocialLinks();
-  }
+  // let socialLinks = null;
+  // if (page.slug === 'sobre') {
+  const socialLinks = await api.getSocialLinks();
+  // }
 
   return json<LoaderData>({
     user,
@@ -71,7 +71,7 @@ export default function () {
       <div className="about container --small">
         {user && (
           <div className="about__sidebar">
-            <Avatar image={user.avatar_url} alt={`Avatar de ${user.name}`} size={320} />
+            <Avatar image={user.avatar_url} alt={`Avatar de ${user.name}`} size={220} />
             {socialLinks && <SocialLinks links={formatSocialLinks<SocialLink>(socialLinks)} />}
           </div>
         )}

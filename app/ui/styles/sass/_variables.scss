@@ -26,7 +26,7 @@ $danger-color: #f8d7da;
 $info-color: #d1ecf1;
 $warning-color: #fff3cd;
 
-$colors-text: #fff;
+$colors-text: $colors-gray-300;
 $colors-link: $primary-color;
 $colors-link-hover: darken($colors-link, 10%);
 
@@ -40,4 +40,4 @@ $desktop: 1201px;
 $desktop-lg: 1361px;
 
 $container-size: 1200px;
-$container-small-size: 960px;
+$container-small-size: 760px;
