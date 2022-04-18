@@ -19,7 +19,7 @@ export function Hero({ user, content, socialLinks }: HeroProps): React.ReactElem
         </div>
         <div className="hero__content">
           <div dangerouslySetInnerHTML={{ __html: content }} />
-          {socialLinks && <SocialLinks links={socialLinks} />}
+          {socialLinks && <SocialLinks links={socialLinks} line />}
         </div>
       </div>
     </div>

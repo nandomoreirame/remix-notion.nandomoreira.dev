@@ -1,25 +1,25 @@
 import type { ContentDatabase } from '~/types';
 import { realUuid, title2slug } from './utils';
 import {
-  IoLogoInstagram,
-  IoLogoTwitter,
-  IoLogoGithub,
-  IoLogoWhatsapp,
-  IoLogoCodepen,
-  IoLogoLinkedin,
-  IoLogoDribbble,
-  IoLogoBehance,
-} from 'react-icons/io5';
+  RiInstagramLine,
+  RiTwitterLine,
+  RiGithubLine,
+  RiWhatsappLine,
+  RiCodepenLine,
+  RiLinkedinBoxLine,
+  RiDribbbleLine,
+  RiBehanceLine,
+} from 'react-icons/ri';
 
 const ICONS_DATA = {
-  instagram: <IoLogoInstagram title="Instagram" size={32} />,
-  twitter: <IoLogoTwitter title="twitter" size={32} />,
-  github: <IoLogoGithub title="github" size={32} />,
-  whatsapp: <IoLogoWhatsapp title="whatsapp" size={32} />,
-  linkedin: <IoLogoLinkedin title="linkedin" size={32} />,
-  codepen: <IoLogoCodepen title="codepen" size={32} />,
-  dribbble: <IoLogoDribbble title="dribbble" size={32} />,
-  behance: <IoLogoBehance title="behance" size={32} />,
+  instagram: <RiInstagramLine title="Instagram" size={32} />,
+  twitter: <RiTwitterLine title="twitter" size={32} />,
+  github: <RiGithubLine title="github" size={32} />,
+  whatsapp: <RiWhatsappLine title="whatsapp" size={32} />,
+  linkedin: <RiLinkedinBoxLine title="linkedin" size={32} />,
+  codepen: <RiCodepenLine title="codepen" size={32} />,
+  dribbble: <RiDribbbleLine title="dribbble" size={32} />,
+  behance: <RiBehanceLine title="behance" size={32} />,
 };
 
 export function formatMenuLinks<T>(database: ContentDatabase): T[] {

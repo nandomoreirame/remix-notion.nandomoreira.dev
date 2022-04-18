@@ -10,11 +10,12 @@ export interface SocialLink {
 
 export interface SocialLinksProps {
   links?: SocialLink[];
+  line?: boolean;
 }
 
-export function SocialLinks({ links = [] }: SocialLinksProps): React.ReactElement {
+export function SocialLinks({ links = [], line = false }: SocialLinksProps): React.ReactElement {
   return (
-    <ul className="socialLinks">
+    <ul className={`socialLinks ${line ? '--line' : ''}`}>
       {links.length > 0 &&
         links.map(({ label, icon, id, url }) => (
           <li key={id} className="socialLinks__item">

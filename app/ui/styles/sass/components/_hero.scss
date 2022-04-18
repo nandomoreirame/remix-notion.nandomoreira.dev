@@ -13,25 +13,21 @@
       min-height: calc(100vh - 60px);
       padding: 30px 0;
       text-align: left;
-
       flex-direction: row;
       justify-content: space-between;
     }
   }
 
   &__image {
-    @include media(min-width $desktop) {
-      flex: 0 0 220px;
+    @include media(min-width $tablet) {
+      flex: 0 0 190px;
     }
   }
 
   &__content {
-    @include media(min-width $desktop) {
-      margin-left: 30px;
-
-      .socialLinks {
-        left: -10px;
-      }
+    @include media(min-width $tablet) {
+      padding-left: 15px;
+      flex: 0 0 80%;
     }
 
     h3 {
