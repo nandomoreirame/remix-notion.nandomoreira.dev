@@ -1,5 +1,5 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useTransition } from '@remix-run/react';
-import { Loading } from '~/ui/components';
+import { EasterEgg, Loading } from '~/ui/components';
 import { DefaultLayout } from '../layouts';
 
 const MENU_LINKS = [
@@ -45,6 +45,7 @@ export function RootApp() {
           <ScrollRestoration />
         </DefaultLayout>
         {loading && <Loading />}
+        <EasterEgg />
         <Scripts />
         {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>

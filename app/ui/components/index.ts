@@ -5,3 +5,4 @@ export * from './Loading';
 export * from './PageHeader';
 export * from './PageMenu';
 export * from './SocialLinks';
+export * from './EasterEgg';

@@ -28,8 +28,10 @@
     "notion-to-md": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hidden-easter-egg": "^1.0.5",
     "react-icons": "^4.3.1",
     "react-markdown": "^8.0.2",
+    "react-raining-confetti": "^1.0.1",
     "remix-utils": "^3.0.0",
     "slugify": "^1.6.5"
   },

@@ -5385,6 +5385,11 @@ react-dom@^17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
+react-hidden-easter-egg@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-hidden-easter-egg/-/react-hidden-easter-egg-1.0.5.tgz#b20e6600df25c621e2135e0e37879dad282af097"
+  integrity sha512-p40yVw6FsEopUPYUDoCmnI7CDL4TL8NfuowL3OqByi45ApCRiI6EOHmkCG3fDRXtgeZf7AYjd0VKBvlxXol1Ng==
+
 react-icons@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"
@@ -5425,6 +5430,11 @@ react-markdown@^8.0.2:
     unified "^10.0.0"
     unist-util-visit "^4.0.0"
     vfile "^5.0.0"
+
+react-raining-confetti@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-raining-confetti/-/react-raining-confetti-1.0.1.tgz#1ac129ab59c256741a03556e5f5f353325453373"
+  integrity sha512-xcjov9UrFJx+97tbBmS/zasKIlzwThmVkZHErAt7ejpwzruK/H+vu8Jo7m5vBotOqtUNvJhmdnKe4K2mymucXQ==
 
 react-router-dom@^6.2.2:
   version "6.3.0"
