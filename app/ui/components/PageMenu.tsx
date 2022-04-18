@@ -20,6 +20,14 @@ export function PageMenu({ links = [] }: PageMenuProps): React.ReactElement {
             {title}
           </NavLink>
         ))}
+      <a
+        className="pageMenu__link --external"
+        href="https://blog.nandomoreira.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Blog
+      </a>
     </nav>
   );
 }
