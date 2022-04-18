@@ -12,6 +12,7 @@
     { "source": "/sobre-mim", "destination": "/sobre" },
     { "source": "/pt-br/sobre", "destination": "/sobre" },
     { "source": "/pt-br/sobre-mim", "destination": "/sobre" },
-    { "source": "/pt/sobre-mim", "destination": "/sobre" }
+    { "source": "/pt/sobre-mim", "destination": "/sobre" },
+    { "source": "/pt/sobre", "destination": "/sobre" }
   ]
 }
