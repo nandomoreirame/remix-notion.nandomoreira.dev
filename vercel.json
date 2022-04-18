@@ -3,5 +3,15 @@
     "env": {
       "ENABLE_FILE_SYSTEM_API": "1"
     }
-  }
+  },
+  "redirects": [
+    { "source": "/projects", "destination": "/projetos" },
+    { "source": "/en/projects", "destination": "/projetos" },
+    { "source": "/about", "destination": "/sobre" },
+    { "source": "/en/about", "destination": "/sobre" },
+    { "source": "/sobre-mim", "destination": "/sobre" },
+    { "source": "/pt-br/sobre", "destination": "/sobre" },
+    { "source": "/pt-br/sobre-mim", "destination": "/sobre" },
+    { "source": "/pt/sobre-mim", "destination": "/sobre" }
+  ]
 }
