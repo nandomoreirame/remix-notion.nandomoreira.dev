@@ -44,7 +44,7 @@ export async function loader({ params }: LoaderSubmission) {
   const user = users.filter(({ type }) => type === 'person')[0];
 
   let socialLinks = null;
-  if (page.slug === 'sobre-mim') {
+  if (page.slug === 'sobre') {
     socialLinks = await api.getSocialLinks();
   }
 

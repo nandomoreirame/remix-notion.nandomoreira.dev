@@ -9,7 +9,7 @@ const MENU_LINKS = [
   },
   {
     title: 'Sobre',
-    path: '/sobre-mim',
+    path: '/sobre',
   },
   {
     title: 'Projetos',
