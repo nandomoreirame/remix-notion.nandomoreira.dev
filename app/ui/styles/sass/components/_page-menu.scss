@@ -1,0 +1,31 @@
+.pageMenu {
+  display: block;
+  min-height: 60px;
+  list-style: none;
+  padding: 10px 0;
+  width: 100%;
+
+  @include media(min-width $mobile-lg) {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition-property: var(--transition-property-common);
+    transition-duration: var(--transition-duration-slow);
+
+    &[aria-current="page"],
+    &.active,
+    &:hover,
+    &:focus {
+      background-color: var(--colors-whiteAlpha-200);
+      color: var(--colors-white);
+    }
+  }
+}
+

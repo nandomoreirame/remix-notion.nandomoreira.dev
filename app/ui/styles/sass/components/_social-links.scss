@@ -1,0 +1,39 @@
+.socialLinks {
+  display: inline-block;
+  list-style: none;
+  margin: 10px auto;
+  padding: 0;
+  max-width: 320px;
+
+  @include media(min-width $tablet) {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    transition-property: var(--transition-property-common);
+    transition-duration: var(--transition-duration-fast);
+    text-decoration: none;
+    display: inline-block;
+    display: flex;
+    padding: 6px;
+    align-items: center;
+    opacity: 0.8;
+
+    svg {
+      transition-property: var(--transition-property-common);
+      transition-duration: var(--transition-duration-fast);
+
+      &:hover,
+      &:focus {
+        transform: rotate(20deg);
+      }
+    }
+  }
+}

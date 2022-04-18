@@ -1,0 +1,70 @@
+@import "./variables";
+
+:root {
+  --font-family-base: #{$font-family-base};
+  --font-family-heading: #{$font-family-heading};
+  --font-family-monospace: #{$font-family-monospace};
+
+  --font-size-xs: 0.737rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+
+  --colors-black: #000;
+  --colors-white: #fff;
+
+  --colors-gray-50: #{$colors-gray-50};
+  --colors-gray-100: #{$colors-gray-100};
+  --colors-gray-200: #{$colors-gray-200};
+  --colors-gray-300: #{$colors-gray-300};
+  --colors-gray-400: #{$colors-gray-400};
+  --colors-gray-500: #{$colors-gray-500};
+  --colors-gray-600: #{$colors-gray-600};
+  --colors-gray-700: #{$colors-gray-700};
+  --colors-gray-800: #{$colors-gray-800};
+  --colors-gray-900: #{$colors-gray-900};
+
+  --colors-text: #{$colors-text};
+  --colors-link: #{$colors-link};
+  --colors-link-hover: #{$colors-link-hover};
+  --colors-background: #{$colors-gray-800};
+
+  --colors-primary: #{$primary-color};
+  --colors-secondary: #{$secondary-color};
+
+  --colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
+  --colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+  --colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
+  --colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+  --colors-whiteAlpha-400: rgba(255, 255, 255, 0.24);
+  --colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
+  --colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
+  --colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
+  --colors-whiteAlpha-800: rgba(255, 255, 255, 0.80);
+  --colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
+  --colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
+  --colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
+  --colors-blackAlpha-200: rgba(0, 0, 0, 0.08);
+  --colors-blackAlpha-300: rgba(0, 0, 0, 0.16);
+  --colors-blackAlpha-400: rgba(0, 0, 0, 0.24);
+  --colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
+  --colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
+  --colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
+  --colors-blackAlpha-800: rgba(0, 0, 0, 0.80);
+  --colors-blackAlpha-900: rgba(0, 0, 0, 0.92);
+
+  --transition-property-common: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+  --transition-property-colors: background-color,border-color,color,fill,stroke;
+  --transition-property-dimensions: width,height;
+  --transition-property-position: left,right,top,bottom;
+  --transition-property-background: background-color,background-image,background-position;
+  --transition-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --transition-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration-fast: 150ms;
+  --transition-duration-normal: 200ms;
+  --transition-duration-slow: 300ms;
+  --transition-duration-slower: 400ms;
+  --transition-duration-ultra-slow: 500ms;
+}

@@ -1,0 +1,30 @@
+.avatar {
+  display: inline-block;
+  padding: 4px;
+  margin: 15px auto;
+
+  @include media(min-width $tablet) {
+    margin-right: 3rem;
+    display: flex;
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &.--square {
+    &, img {
+      border-radius: 4px;
+    }
+  }
+
+  &.--circle {
+    border: 2px solid var(--colors-gray-300);
+
+    &, img {
+      border-radius: 999px;
+    }
+  }
+}
