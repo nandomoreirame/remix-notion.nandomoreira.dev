@@ -41,43 +41,54 @@
       display: flex;
     }
 
-    span {
+    sup {
+      color: var(--colors-secondary);
+      font-size: 0.8rem;
+      line-height: 1;
+      margin-left: 5px;
+    }
+
+    strong {
       color: var(--colors-primary);
     }
 
     &:hover {
       color: var(--colors-primary);
 
-      span {
+      strong {
         color: var(--colors-white);
       }
 
-      &::before {
+      span::before {
         transform: translateX(5px);
       }
-      &::after {
+      span::after {
         transform: translateX(-5px);
       }
     }
 
-    &::before,
-    &::after {
-      display: inline-block;
-      color: var(--colors-white);
-      vertical-align: middle;
-      transition-property: var(--transition-property-common);
-      transition-duration: var(--transition-duration-slow);
-      position: relative;
-    }
+    span {
+      display: flex;
 
-    &::before {
-      content: "{";
-      margin-right: 10px;
-    }
+      &::before,
+      &::after {
+        display: inline-block;
+        color: var(--colors-white);
+        vertical-align: middle;
+        transition-property: var(--transition-property-common);
+        transition-duration: var(--transition-duration-slow);
+        position: relative;
+      }
 
-    &::after {
-      content: "}";
-      margin-left: 10px;
+      &::before {
+        content: "{";
+        margin-right: 10px;
+      }
+
+      &::after {
+        content: "}";
+        margin-left: 10px;
+      }
     }
 
     @include media(min-width $mobile-lg) {

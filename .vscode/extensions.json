@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "gruntfuggly.todo-tree"
+  ]
+}

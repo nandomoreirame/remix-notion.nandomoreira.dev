@@ -3,15 +3,16 @@
   padding: 4px;
   margin: 15px auto;
 
-  @include media(min-width $tablet) {
+  @include media(min-width $desktop) {
     margin-right: 3rem;
     display: flex;
   }
 
   &__image {
-    height: 100%;
+    height: auto;
     object-fit: cover;
     width: 100%;
+    display: block;
   }
 
   &.--square {
