@@ -1,9 +1,10 @@
 import type { MetaFunction } from '@remix-run/node';
+import { json } from '@remix-run/node';
 import { CatchBoundary as ErrorsBoundaryView, RootApp as RootAppView } from './ui/views';
 
 import rootStyles from './ui/styles/css/root.css';
 import globalsStyles from './ui/styles/css/globals.css';
-import { useCatch } from '@remix-run/react';
+import { useCatch, useLoaderData } from '@remix-run/react';
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
@@ -38,7 +39,14 @@ export const links: LinksFunction = () => {
   ];
 };
 
-// export async function loader() {}
+type LoaderData = {
+  googleAnalyticsId?: string;
+};
+
+export async function loader() {
+  const googleAnalyticsId = process.env?.SITE_GA_ID;
+  return json<LoaderData>({ googleAnalyticsId });
+}
 
 export function ErrorBoundary({ error }) {
   console.error({ error });
@@ -51,5 +59,6 @@ export function CatchBoundary() {
 }
 
 export default function App() {
-  return <RootAppView />;
+  const { googleAnalyticsId } = useLoaderData<LoaderData>();
+  return <RootAppView gaId={googleAnalyticsId} />;
 }

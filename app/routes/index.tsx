@@ -45,6 +45,7 @@ export async function loader() {
 }
 
 export const meta: MetaFunction = ({ data }) => {
+  if (!data || data?.status) return { title: data?.status || 'Oops!', description: data?.statusText };
   const { title, description } = data as LoaderData;
   return { title, description };
 };

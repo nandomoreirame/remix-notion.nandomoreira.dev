@@ -25,7 +25,7 @@ const MENU_LINKS = [
   },
 ];
 
-export function RootApp() {
+export function RootApp({ gaId }: { gaId?: string }) {
   const [loading, setLoading] = React.useState(false);
   const transition = useTransition();
 
@@ -38,6 +38,21 @@ export function RootApp() {
       <head>
         <Meta />
         <Links />
+        {process.env.NODE_ENV === 'production' && gaId && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}');
+              `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body>
         <DefaultLayout menuLinks={MENU_LINKS}>
