@@ -6,6 +6,7 @@ import {
   PrefetchPageLinks,
   Scripts,
   ScrollRestoration,
+  useMatches,
   useTransition,
 } from '@remix-run/react';
 import { EasterEgg, Loading } from '~/ui/components';
@@ -37,6 +38,9 @@ const MENU_LINKS = [
 export function RootApp({ gaId }: { gaId?: string }) {
   const [loading, setLoading] = React.useState(false);
   const transition = useTransition();
+  const matches = useMatches();
+  const match = matches.find(match => match.data && match.data.canonical);
+  const canonical = match?.data?.canonical;
 
   React.useEffect(() => {
     setLoading(transition?.state === 'loading');
@@ -46,6 +50,7 @@ export function RootApp({ gaId }: { gaId?: string }) {
     <html lang="pt-br" data-theme="dracula">
       <head>
         <Meta />
+        {!!canonical && <link rel="canonical" href={canonical} />}
         <Links />
         <PrefetchPageLinks page="/" />
         <PrefetchPageLinks page="/sobre" />

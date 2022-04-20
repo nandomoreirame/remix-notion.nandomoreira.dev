@@ -19,6 +19,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@next-boost/hybrid-disk-cache": "^0.3.0",
     "@notionhq/client": "^1.0.4",
     "@remix-run/node": "^1.4.0",
     "@remix-run/react": "^1.4.0",
@@ -32,7 +33,9 @@
     "react-icons": "^4.3.1",
     "react-markdown": "^8.0.2",
     "react-raining-confetti": "^1.0.1",
+    "remix-image": "^0.3.16",
     "remix-utils": "^3.0.0",
+    "sharp": "^0.30.4",
     "slugify": "^1.6.5"
   },
   "devDependencies": {

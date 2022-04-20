@@ -19,6 +19,7 @@ type LoaderData = {
   socialLinks: ContentDatabase[];
   title: string;
   user: User;
+  canonical: string;
 };
 
 export async function loader() {
@@ -33,6 +34,7 @@ export async function loader() {
   const user = users.filter(({ type }) => type === 'person')[0];
 
   const socialLinks = await api.getSocialLinks();
+  const canonical = `${process.env?.SITE_BASE_URL}`;
 
   // return json(user);
   return json<LoaderData>({
@@ -41,6 +43,7 @@ export async function loader() {
     socialLinks,
     title: contentFormated.title,
     user,
+    canonical,
   });
 }
 

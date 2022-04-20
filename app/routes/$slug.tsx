@@ -21,6 +21,7 @@ type LoaderData = {
   page: PageContents;
   content: string;
   socialLinks: ContentDatabase[] | null;
+  canonical: string;
 };
 
 export async function loader({ params }: LoaderSubmission) {
@@ -43,12 +44,14 @@ export async function loader({ params }: LoaderSubmission) {
   const users = await notionService.getUsers<User>();
   const user = users.filter(({ type }) => type === 'person')[0];
   const socialLinks = await api.getSocialLinks();
+  const canonical = `${process.env?.SITE_BASE_URL}/${page?.slug}`;
 
   return json<LoaderData>({
     user,
     page,
     content: marked(markdown),
     socialLinks,
+    canonical,
   });
 }
 
@@ -62,17 +65,17 @@ export default function () {
   const { user, page, content, socialLinks } = useLoaderData<LoaderData>();
 
   return (
-    <>
+    <section className="page">
       <PageHeader title={page.title} description={page.description} cover={page.cover} />
-      <div className="about container --small">
+      <div className="page__inner container --small">
         {user && (
-          <div className="about__sidebar">
+          <aside className="page__sidebar">
             <Avatar image={user.avatar_url} alt={`Avatar de ${user.name}`} size={220} />
             {socialLinks && <SocialLinks links={formatSocialLinks<SocialLink>(socialLinks)} />}
-          </div>
+          </aside>
         )}
-        <div className="mdContent about__content" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className="mdContent page__content" dangerouslySetInnerHTML={{ __html: content }} />
       </div>
-    </>
+    </section>
   );
 }

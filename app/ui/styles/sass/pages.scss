@@ -6,13 +6,15 @@
 @import "./components/social-links";
 @import "./components/page-header";
 
-.about {
-  flex-direction: column;
+.page {
+  &__inner {
+    flex-direction: column;
 
-  @include media(min-width $desktop) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include media(min-width $desktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   &__sidebar {
