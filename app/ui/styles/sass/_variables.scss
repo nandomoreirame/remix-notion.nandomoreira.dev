@@ -16,18 +16,27 @@ $colors-gray-700: #2D3748;
 $colors-gray-800: #1A202C;
 $colors-gray-900: #171923;
 
-$colors-background: $colors-gray-800;
+$colors-cyan: #8be9fd;
+$colors-green: #50fa7b;
+$colors-red: #ff5555;
+$colors-purple: #bd93f9;
+$colors-pink: #ff79c6;
+$colors-orange: #ffb86c;
+$colors-yellow: #f1fa8c;
 
-$primary-color: #25ced1;
-$secondary-color: #4b5b6c;
+$colors-primary: #282a36;
+$colors-secondary: $colors-cyan; //#44475a;
+$colors-background: $colors-primary;
+$colors-foreground: #f8f8f2;
+$colors-selection: #44475A;
 
-$success-color: #d4edda;
-$danger-color: #f8d7da;
-$info-color: #d1ecf1;
-$warning-color: #fff3cd;
+$colors-success: $colors-green;
+$colors-danger: $colors-red;
+$colors-info: $colors-purple;
+$colors-warning: $colors-yellow;
 
-$colors-text: $colors-gray-300;
-$colors-link: $primary-color;
+$colors-text: $colors-foreground;
+$colors-link: lighten($colors-secondary, 5%);
 $colors-link-hover: darken($colors-link, 10%);
 
 $timing-function: cubic-bezier(0.565, 1.65, 0.765, 0.88);

@@ -25,14 +25,6 @@
   --colors-gray-800: #{$colors-gray-800};
   --colors-gray-900: #{$colors-gray-900};
 
-  --colors-text: #{$colors-text};
-  --colors-link: #{$colors-link};
-  --colors-link-hover: #{$colors-link-hover};
-  --colors-background: #{$colors-background};
-
-  --colors-primary: #{$primary-color};
-  --colors-secondary: #{$secondary-color};
-
   --colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
   --colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
   --colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
@@ -67,4 +59,26 @@
   --transition-duration-slow: 300ms;
   --transition-duration-slower: 400ms;
   --transition-duration-ultra-slow: 500ms;
+}
+
+html[data-theme="dracula"] {
+  --colors-primary: #{$colors-primary};
+  --colors-secondary: #{$colors-secondary};
+  --colors-text: #{$colors-text};
+  --colors-link: #{$colors-link};
+  --colors-link-hover: #{$colors-link-hover};
+  --colors-background: #{$colors-background};
+  --colors-foreground: #{$colors-foreground};
+  --colors-selection: #{$colors-selection};
+  --colors-cyan: #{$colors-cyan};
+  --colors-green: #{$colors-green};
+  --colors-red: #{$colors-red};
+  --colors-purple: #{$colors-purple};
+  --colors-pink: #{$colors-pink};
+  --colors-orange: #{$colors-orange};
+  --colors-yellow: #{$colors-yellow};
+  --colors-success: ${$colors-success};
+  --colors-danger: ${$colors-danger};
+  --colors-info: ${$colors-info};
+  --colors-warning: ${$colors-warning};
 }

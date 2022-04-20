@@ -3,6 +3,17 @@
 @import "./reset";
 @import "./errors";
 
+*::selection {
+  background: var(--colors-selection);
+  color: var(--colors-foreground);
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--colors-selection);
+  margin: 2rem 0;
+}
+
 .container {
   max-width: $container-size;
   margin-left: auto;

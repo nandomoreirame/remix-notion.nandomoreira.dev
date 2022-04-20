@@ -21,7 +21,7 @@
       width: 100px;
       height: 2px;
       margin: 30px auto;
-      background: var(--colors-primary);
+      background: var(--colors-secondary);
 
       @include media(min-width $tablet) {
         margin: 0;

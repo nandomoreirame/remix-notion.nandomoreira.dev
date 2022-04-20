@@ -12,12 +12,13 @@
   }
 
   &__link {
-    display: inline-block;
-    padding: 8px 12px;
-    margin: 0 5px;
     border-radius: 4px;
-    transition-property: var(--transition-property-common);
+    color: var(--colors-secondary);
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px 12px;
     transition-duration: var(--transition-duration-slow);
+    transition-property: var(--transition-property-common);
 
     &[aria-current="page"],
     &.active,

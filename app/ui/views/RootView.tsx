@@ -34,7 +34,7 @@ export function RootApp({ gaId }: { gaId?: string }) {
   }, [transition]);
 
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" data-theme="dracula">
       <head>
         <Meta />
         <Links />
