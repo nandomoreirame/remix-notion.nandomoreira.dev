@@ -42,11 +42,7 @@ export async function loader({ params }: LoaderSubmission) {
 
   const users = await notionService.getUsers<User>();
   const user = users.filter(({ type }) => type === 'person')[0];
-
-  // let socialLinks = null;
-  // if (page.slug === 'sobre') {
   const socialLinks = await api.getSocialLinks();
-  // }
 
   return json<LoaderData>({
     user,

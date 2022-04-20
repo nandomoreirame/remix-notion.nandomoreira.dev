@@ -1,4 +1,13 @@
-import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration, useTransition } from '@remix-run/react';
+import {
+  Links,
+  LiveReload,
+  Meta,
+  Outlet,
+  PrefetchPageLinks,
+  Scripts,
+  ScrollRestoration,
+  useTransition,
+} from '@remix-run/react';
 import { EasterEgg, Loading } from '~/ui/components';
 import { DefaultLayout } from '../layouts';
 
@@ -38,6 +47,9 @@ export function RootApp({ gaId }: { gaId?: string }) {
       <head>
         <Meta />
         <Links />
+        <PrefetchPageLinks page="/" />
+        <PrefetchPageLinks page="/sobre" />
+        <PrefetchPageLinks page="/contato" />
         {process.env.NODE_ENV === 'production' && gaId && (
           <>
             <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
@@ -57,10 +69,10 @@ export function RootApp({ gaId }: { gaId?: string }) {
       <body>
         <DefaultLayout menuLinks={MENU_LINKS}>
           <Outlet />
-          <ScrollRestoration />
         </DefaultLayout>
         {loading && <Loading />}
         <EasterEgg />
+        <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
