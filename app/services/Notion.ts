@@ -54,6 +54,10 @@ class NotionService {
         filter: _filter,
         sorts: [
           {
+            property: 'title', // notion database "title" property
+            direction: 'descending',
+          },
+          {
             property: 'created', // notion database "created" property
             direction: 'ascending',
           },

@@ -9,6 +9,7 @@ import {
   RiLinkedinBoxLine,
   RiDribbbleLine,
   RiBehanceLine,
+  RiDiscordLine,
 } from 'react-icons/ri';
 
 const ICONS_DATA = {
@@ -20,6 +21,7 @@ const ICONS_DATA = {
   codepen: <RiCodepenLine title="codepen" size={32} />,
   dribbble: <RiDribbbleLine title="dribbble" size={32} />,
   behance: <RiBehanceLine title="behance" size={32} />,
+  discord: <RiDiscordLine title="behance" size={32} />,
 };
 
 export function formatMenuLinks<T>(database: ContentDatabase): T[] {
