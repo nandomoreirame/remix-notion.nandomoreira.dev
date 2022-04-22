@@ -35,7 +35,7 @@ export async function loader() {
   const user = users.filter(({ type }) => type === 'person')[0];
 
   const socialLinks = await api.getSocialLinks();
-  const canonical = getBaseUrl();
+  const canonical = `${getBaseUrl()}/`;
 
   // return json(user);
   return json<LoaderData>({

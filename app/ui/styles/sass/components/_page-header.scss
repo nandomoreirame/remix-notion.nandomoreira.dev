@@ -20,7 +20,9 @@
 
   &__title {
     color: var(--colors-gray-300);
+    font-family: var(--font-family-heading);
     font-size: 1rem;
+    font-weight: 400;
     letter-spacing: -0.025em;
     line-height: 1.33;
     margin-bottom: 0.75rem;

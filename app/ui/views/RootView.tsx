@@ -49,12 +49,20 @@ export function RootApp({ gaId }: { gaId?: string }) {
   return (
     <html lang="pt-br" data-theme="dracula">
       <head>
+        <meta charSet="utf-8" />
+        <meta content="width=device-width,initial-scale=1" name="viewport" />
         <Meta />
-        {!!canonical && <link rel="canonical" href={canonical} />}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&amp;display=swap"
+        />
         <Links />
         <PrefetchPageLinks page="/" />
         <PrefetchPageLinks page="/sobre" />
         <PrefetchPageLinks page="/contato" />
+        {!!canonical && <link rel="canonical" href={canonical} />}
         {process.env.NODE_ENV === 'production' && gaId && (
           <>
             <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />

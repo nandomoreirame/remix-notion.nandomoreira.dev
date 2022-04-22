@@ -45,7 +45,7 @@ export async function loader({ params }: LoaderSubmission) {
   const users = await notionService.getUsers<User>();
   const user = users.filter(({ type }) => type === 'person')[0];
   const socialLinks = await api.getSocialLinks();
-  const canonical = `${getBaseUrl()}/${page?.slug}`;
+  const canonical = `${getBaseUrl()}/${page?.slug}/`;
 
   return json<LoaderData>({
     user,
