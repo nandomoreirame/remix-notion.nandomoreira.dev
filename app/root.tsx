@@ -1,6 +1,7 @@
 import { json } from '@remix-run/node';
-import { useCatch, useLoaderData } from '@remix-run/react';
-import { CatchBoundary as ErrorsBoundaryView, RootApp as RootAppView } from './ui/views';
+import { Outlet, useCatch, useLoaderData } from '@remix-run/react';
+
+import { CatchBoundary as ErrorsBoundaryView, Document as DocumentView } from './ui/views';
 
 import rootStyles from './ui/styles/css/root.css';
 import globalsStyles from './ui/styles/css/globals.css';
@@ -39,5 +40,9 @@ export function CatchBoundary() {
 
 export default function App() {
   const { googleAnalyticsId } = useLoaderData<LoaderData>();
-  return <RootAppView gaId={googleAnalyticsId} />;
+  return (
+    <DocumentView gaId={googleAnalyticsId}>
+      <Outlet />
+    </DocumentView>
+  );
 }

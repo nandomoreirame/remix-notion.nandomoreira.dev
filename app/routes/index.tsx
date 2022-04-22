@@ -1,5 +1,5 @@
 import { json } from '@remix-run/node';
-import type { ContentDatabase, User } from '~/types';
+import type { ContentDatabase, SEO, User } from '~/types';
 import { api, notionService } from '~/services';
 import { formatPageContents, formatSocialLinks, realUuid } from '~/presenters';
 import { useLoaderData } from '@remix-run/react';
@@ -20,7 +20,7 @@ type LoaderData = {
   socialLinks: ContentDatabase[];
   title: string;
   user: User;
-  canonical: string;
+  seo: SEO;
 };
 
 export async function loader() {
@@ -35,7 +35,12 @@ export async function loader() {
   const user = users.filter(({ type }) => type === 'person')[0];
 
   const socialLinks = await api.getSocialLinks();
-  const canonical = `${getBaseUrl()}/`;
+  const seo = {
+    title: contentFormated.title,
+    description: contentFormated.description,
+    image: `${getBaseUrl()}/images/share.jpg`,
+    url: `${getBaseUrl()}/`,
+  };
 
   // return json(user);
   return json<LoaderData>({
@@ -44,7 +49,7 @@ export async function loader() {
     socialLinks,
     title: contentFormated.title,
     user,
-    canonical,
+    seo,
   });
 }
 

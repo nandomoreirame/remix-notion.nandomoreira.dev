@@ -6,7 +6,7 @@ import { api, notionService } from '~/services';
 import { json } from '@remix-run/node';
 import type { PageContents } from '~/presenters';
 import { formatSocialLinks, realUuid, formatMenuLinks, formatPageContents } from '~/presenters';
-import type { ContentDatabase } from '~/types';
+import type { ContentDatabase, SEO } from '~/types';
 import type { PageMenuLink, SocialLink } from '~/ui';
 import { SocialLinks, Avatar, PageHeader } from '~/ui';
 
@@ -22,7 +22,7 @@ type LoaderData = {
   page: PageContents;
   content: string;
   socialLinks: ContentDatabase[] | null;
-  canonical: string;
+  seo: SEO;
 };
 
 export async function loader({ params }: LoaderSubmission) {
@@ -45,14 +45,19 @@ export async function loader({ params }: LoaderSubmission) {
   const users = await notionService.getUsers<User>();
   const user = users.filter(({ type }) => type === 'person')[0];
   const socialLinks = await api.getSocialLinks();
-  const canonical = `${getBaseUrl()}/${page?.slug}/`;
+  const seo = {
+    title: page.title,
+    description: page.description,
+    image: page.cover,
+    url: `${getBaseUrl()}/${page?.slug}/`,
+  };
 
   return json<LoaderData>({
     user,
     page,
     content: marked(markdown),
     socialLinks,
-    canonical,
+    seo,
   });
 }
 
@@ -71,7 +76,7 @@ export default function () {
       <div className="page__inner container --small">
         {user && (
           <aside className="page__sidebar">
-            <Avatar image={user.avatar_url} alt={`Avatar de ${user.name}`} size={220} />
+            <Avatar image={'/images/avatar.png'} alt={`Avatar de ${user.name}`} size={220} />
             {socialLinks && <SocialLinks links={formatSocialLinks<SocialLink>(socialLinks)} />}
           </aside>
         )}

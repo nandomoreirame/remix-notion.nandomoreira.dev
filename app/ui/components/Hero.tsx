@@ -15,7 +15,7 @@ export function Hero({ user, content, socialLinks }: HeroProps): React.ReactElem
     <div className="hero container">
       <div className="hero__inner">
         <div className="hero__image">
-          <Avatar image={user.avatar_url} alt={`Avatar de ${user.name}`} size={220} circle />
+          <Avatar image={'/images/avatar.png'} alt={`Avatar de ${user.name}`} size={220} circle />
         </div>
         <div className="hero__content">
           <div dangerouslySetInnerHTML={{ __html: content }} />
