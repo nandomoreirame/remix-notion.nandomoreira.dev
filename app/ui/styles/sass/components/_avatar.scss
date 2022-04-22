@@ -17,7 +17,8 @@
   }
 
   &.--square {
-    &, img {
+    &,
+    img {
       border-radius: 4px;
     }
   }
@@ -25,7 +26,8 @@
   &.--circle {
     border: 2px solid var(--colors-gray-300);
 
-    &, img {
+    &,
+    img {
       border-radius: 999px;
     }
   }

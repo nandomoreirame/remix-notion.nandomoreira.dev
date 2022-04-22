@@ -21,9 +21,7 @@ $default-feature: max-width;
     @media screen and ($default-feature: nth($query, 1)) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     $loop-to: length($query);
     $media-query: 'screen and ';
 

@@ -1,4 +1,5 @@
-api
+/api/
 build
 public
 .cache
+.vercel

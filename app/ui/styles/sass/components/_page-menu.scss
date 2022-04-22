@@ -20,7 +20,7 @@
     transition-duration: var(--transition-duration-slow);
     transition-property: var(--transition-property-common);
 
-    &[aria-current="page"],
+    &[aria-current='page'],
     &.active,
     &:hover,
     &:focus {
@@ -29,4 +29,3 @@
     }
   }
 }
-

@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 :root {
   --font-family-base: #{$font-family-base};
@@ -33,7 +33,7 @@
   --colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
   --colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
   --colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
-  --colors-whiteAlpha-800: rgba(255, 255, 255, 0.80);
+  --colors-whiteAlpha-800: rgba(255, 255, 255, 0.8);
   --colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
   --colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
   --colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
@@ -43,14 +43,14 @@
   --colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
   --colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
   --colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
-  --colors-blackAlpha-800: rgba(0, 0, 0, 0.80);
+  --colors-blackAlpha-800: rgba(0, 0, 0, 0.8);
   --colors-blackAlpha-900: rgba(0, 0, 0, 0.92);
 
-  --transition-property-common: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
-  --transition-property-colors: background-color,border-color,color,fill,stroke;
-  --transition-property-dimensions: width,height;
-  --transition-property-position: left,right,top,bottom;
-  --transition-property-background: background-color,background-image,background-position;
+  --transition-property-common: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  --transition-property-colors: background-color, border-color, color, fill, stroke;
+  --transition-property-dimensions: width, height;
+  --transition-property-position: left, right, top, bottom;
+  --transition-property-background: background-color, background-image, background-position;
   --transition-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
   --transition-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
   --transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -61,7 +61,7 @@
   --transition-duration-ultra-slow: 500ms;
 }
 
-html[data-theme="dracula"] {
+html[data-theme='dracula'] {
   --colors-primary: #{$colors-primary};
   --colors-secondary: #{$colors-secondary};
   --colors-text: #{$colors-text};
@@ -77,8 +77,8 @@ html[data-theme="dracula"] {
   --colors-pink: #{$colors-pink};
   --colors-orange: #{$colors-orange};
   --colors-yellow: #{$colors-yellow};
-  --colors-success: ${$colors-success};
-  --colors-danger: ${$colors-danger};
-  --colors-info: ${$colors-info};
-  --colors-warning: ${$colors-warning};
+  --colors-success: #{$colors-success};
+  --colors-danger: #{$colors-danger};
+  --colors-info: #{$colors-info};
+  --colors-warning: #{$colors-warning};
 }

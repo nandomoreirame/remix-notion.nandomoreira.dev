@@ -11,6 +11,7 @@ import type { PageMenuLink, SocialLink } from '~/ui';
 import { SocialLinks, Avatar, PageHeader } from '~/ui';
 
 import pagesStyles from '~/ui/styles/css/pages.css';
+import { getBaseUrl } from '~/util/helpers';
 
 export function links() {
   return [{ rel: 'stylesheet', href: pagesStyles }];
@@ -44,7 +45,7 @@ export async function loader({ params }: LoaderSubmission) {
   const users = await notionService.getUsers<User>();
   const user = users.filter(({ type }) => type === 'person')[0];
   const socialLinks = await api.getSocialLinks();
-  const canonical = `${process.env?.SITE_BASE_URL}/${page?.slug}`;
+  const canonical = `${getBaseUrl()}/${page?.slug}`;
 
   return json<LoaderData>({
     user,

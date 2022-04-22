@@ -20,7 +20,6 @@
   "search.exclude": {
     "**/build": true,
     "**/public": true,
-    "**/api": true,
     "**/node_modules": true,
     "**/styles/css": true
   },

@@ -8,6 +8,7 @@ import type { SocialLink } from '~/ui';
 import { Hero } from '~/ui';
 
 import homeStyles from '~/ui/styles/css/home.css';
+import { getBaseUrl } from '~/util/helpers';
 
 export function links() {
   return [{ rel: 'stylesheet', href: homeStyles }];
@@ -34,7 +35,7 @@ export async function loader() {
   const user = users.filter(({ type }) => type === 'person')[0];
 
   const socialLinks = await api.getSocialLinks();
-  const canonical = `${process.env?.SITE_BASE_URL}`;
+  const canonical = getBaseUrl();
 
   // return json(user);
   return json<LoaderData>({

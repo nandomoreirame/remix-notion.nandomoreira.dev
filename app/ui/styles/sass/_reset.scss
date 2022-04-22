@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 body,
@@ -14,7 +14,7 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0
+  margin: 0;
 }
 
 h1,
@@ -37,16 +37,16 @@ h3 {
   font-size: 2rem;
 }
 
-ul[role="list"],
-ol[role="list"] {
-  list-style: none
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
 html {
   font-size: 16px;
 
   &:focus-within {
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
   }
 }
 
@@ -76,8 +76,9 @@ a {
 
   &.--external {
     &::after {
-      content: "↗︎";
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      content: '↗︎';
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
       font-size: 80%;
       padding-left: 5px;
       position: relative;
@@ -86,7 +87,7 @@ a {
 }
 
 a:not([class]) {
-  text-decoration-skip-ink: auto
+  text-decoration-skip-ink: auto;
 }
 
 p {
@@ -97,7 +98,7 @@ p {
 img,
 picture {
   max-width: 100%;
-  display: block
+  display: block;
 }
 
 input,
@@ -107,17 +108,17 @@ select {
   font: inherit;
 }
 
-@media(prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   html:focus-within {
-    scroll-behavior: auto
+    scroll-behavior: auto;
   }
 
   *,
   *::before,
   *::after {
-    animation-duration: .01ms !important;
+    animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-    scroll-behavior: auto !important
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

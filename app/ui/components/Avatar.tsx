@@ -17,7 +17,8 @@ export function Avatar({
 }: AvatarProps): React.ReactElement {
   return (
     <div className={`avatar ${circle ? '--circle' : '--square'}`} style={{ flex: `0 0 ${size}px` }}>
-      <Image
+      <img className="avatar__image" src={image} alt={alt} width={size} height={size} loading="lazy" {...imgProps} />
+      {/* <Image
         src={image}
         alt={alt}
         loaderUrl="/api/image"
@@ -32,7 +33,7 @@ export function Avatar({
         ]}
         className="avatar__image"
         {...imgProps}
-      />
+      /> */}
     </div>
   );
 }
