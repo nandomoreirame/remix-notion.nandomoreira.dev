@@ -9,7 +9,7 @@ import {
   useTransition,
 } from '@remix-run/react';
 import * as React from 'react';
-import { useShouldHydrate } from 'remix-utils';
+// import { useShouldHydrate } from 'remix-utils';
 import { DefaultLayout } from '../layouts';
 import { EasterEgg, Loading } from '../components';
 import { getBaseUrl } from '~/util/helpers';
@@ -49,15 +49,10 @@ export function Document({ children, gaId, lang = 'pt-br', title }: DocumentProp
   const [loading, setLoading] = React.useState(false);
   const transition = useTransition();
   // note: use `export const handle = { hydrate: true };` in any route to enable JS
-  const includeScripts = useShouldHydrate();
+  // const includeScripts = useShouldHydrate();
   const matches = useMatches();
   const match = matches.find(match => match.data && match.data.seo);
   const seo: SEO = match?.data?.seo;
-
-  React.useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log({ match });
-  }, [match]);
 
   React.useEffect(() => {
     setLoading(transition?.state === 'loading');
@@ -76,6 +71,7 @@ export function Document({ children, gaId, lang = 'pt-br', title }: DocumentProp
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&amp;display=swap"
         />
+
         {seo && (
           <>
             <link rel="canonical" href={seo.url || `${getBaseUrl()}/`} />
@@ -126,7 +122,8 @@ export function Document({ children, gaId, lang = 'pt-br', title }: DocumentProp
         {loading && <Loading />}
         <EasterEgg />
         <ScrollRestoration />
-        {includeScripts && <Scripts />}
+        <Scripts />
+        {/* {includeScripts && <Scripts />} */}
         {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
     </html>
