@@ -18,7 +18,7 @@ export function formatPageContents({ id, cover, properties }: ContentDatabase): 
 
   switch (cover?.type) {
     case 'file':
-      _cover = cover.file;
+      _cover = cover.file.url;
       break;
     case 'external':
       _cover = cover.external.url;
