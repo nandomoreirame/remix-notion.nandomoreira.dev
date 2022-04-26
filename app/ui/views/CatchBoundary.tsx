@@ -4,11 +4,12 @@ import { ErrorLayout } from '../layouts';
 export interface CatchBoundaryProps {
   status: string;
   text: string;
+  lang?: string;
 }
 
-export function CatchBoundary({ status, text }: CatchBoundaryProps) {
+export function CatchBoundary({ status, text, lang = 'en' }: CatchBoundaryProps) {
   return (
-    <html lang="en">
+    <html lang={lang} data-theme="dracula">
       <head>
         <title>
           Oops! {status} {text}
