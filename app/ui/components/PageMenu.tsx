@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from '@remix-run/react';
+import { NavLink } from '@remix-run/react';
 import * as React from 'react';
 
 export interface PageMenuLink {
@@ -14,13 +14,6 @@ export interface PageMenuProps {
 }
 
 export function PageMenu({ links = [] }: PageMenuProps): React.ReactElement {
-  let { pathname } = useLocation();
-
-  React.useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log({ pathname });
-  }, [pathname]);
-
   return (
     <nav className="pageMenu">
       {links.length > 0 &&
