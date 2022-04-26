@@ -1,10 +1,10 @@
 .header {
-  background: var(--colors-background);
+  background-color: var(--colors-background);
   min-height: 60px;
   padding: 0 30px;
   width: 100%;
 
-  @include media(min-width $mobile-lg) {
+  @include media(min-width $tablet) {
     margin-bottom: 20px;
     left: 0;
     right: 0;
@@ -17,7 +17,7 @@
     text-align: center;
     width: 100%;
 
-    @include media(min-width $mobile-lg) {
+    @include media(min-width $tablet) {
       align-items: center;
       display: flex;
       justify-content: space-between;
@@ -34,7 +34,7 @@
     transition-duration: var(--transition-duration-slow);
     transition-property: var(--transition-property-common);
 
-    @include media(min-width $mobile-lg) {
+    @include media(min-width $tablet) {
       align-items: center;
       display: flex;
     }
@@ -89,7 +89,7 @@
       }
     }
 
-    @include media(min-width $mobile-lg) {
+    @include media(min-width $tablet) {
       margin: 0;
     }
   }

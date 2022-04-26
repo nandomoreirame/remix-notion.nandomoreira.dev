@@ -1,24 +1,57 @@
 .pageMenu {
-  display: block;
-  min-height: 60px;
+  align-items: center;
+  display: flex;
   list-style: none;
-  padding: 10px 0;
+  padding: 0 30px;
   width: 100%;
 
-  @include media(min-width $mobile-lg) {
-    align-items: center;
-    display: flex;
+  @include media(max-width $tablet) {
+    background-color: var(--colors-background);
+    bottom: 0;
+    justify-content: space-around;
+    left: 0;
+    min-height: 80px;
+    position: fixed;
+    right: 0;
+    z-index: 99;
+  }
+
+  @include media(min-width $tablet) {
+    position: relative;
+    padding: 10px 0;
     justify-content: flex-end;
   }
 
-  &__link {
-    border-radius: 4px;
-    color: var(--colors-secondary);
-    display: inline-block;
-    margin: 0 5px;
-    padding: 8px 12px;
+  &__icon {
+    opacity: 1;
+    transform: translateY(-50%);
     transition-duration: var(--transition-duration-slow);
     transition-property: var(--transition-property-common);
+    position: absolute;
+    left: 6px;
+    top: 50%;
+
+    &.--activeIcon {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  &__link {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--colors-secondary);
+    display: flex;
+    line-height: 1;
+    margin: 0 5px;
+    padding: 8px 12px 8px 26px;
+    position: relative;
+    transition-duration: var(--transition-duration-slow);
+    transition-property: var(--transition-property-common);
+
+    @include media(max-width $tablet) {
+      padding: 20px;
+    }
 
     &[aria-current='page'],
     &.active,
@@ -26,6 +59,39 @@
     &:focus {
       background-color: var(--colors-whiteAlpha-200);
       color: var(--colors-white);
+
+      .pageMenu__icon.--activeIcon {
+        opacity: 1;
+        transform: translateY(-50%);
+      }
+      .pageMenu__icon.--nonActiveIcon {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+
+      @include media(max-width $tablet) {
+        border-radius: 12px;
+      }
+    }
+
+    svg {
+      width: 26px;
+      height: 26px;
+
+      @include media(min-width $tablet) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    span {
+      display: none;
+      margin: 0;
+
+      @include media(min-width $tablet) {
+        display: inline-block;
+        margin-left: .5rem;
+      }
     }
   }
 }

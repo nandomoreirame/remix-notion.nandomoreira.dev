@@ -9,7 +9,18 @@ import {
   useTransition,
 } from '@remix-run/react';
 import * as React from 'react';
-// import { useShouldHydrate } from 'remix-utils';
+import {
+  TiHome,
+  TiHomeOutline,
+  TiUserOutline,
+  TiUser,
+  TiMessage,
+  TiMessages,
+  // TiDeviceDesktop,
+  // TiDeviceLaptop,
+  // TiCodeOutline,
+  // TiCode,
+} from 'react-icons/ti';
 import { DefaultLayout } from '../layouts';
 import { EasterEgg, Loading } from '../components';
 import { getBaseUrl } from '~/util/helpers';
@@ -26,30 +37,50 @@ const MENU_LINKS = [
   {
     title: 'Home',
     path: '/',
+    icon: <TiHomeOutline size={20} />,
+    activeIcon: <TiHome size={20} />,
   },
   {
     title: 'Sobre',
     path: '/sobre',
+    icon: <TiUserOutline size={20} />,
+    activeIcon: <TiUser size={20} />,
   },
+  // {
+  //   title: 'Lab',
+  //   path: '/lab',
+  //   icon: <TiCodeOutline size={20} />,
+  //   activeIcon: <TiCode size={20} />,
+  // },
+  // {
+  //   title: 'O que uso',
+  //   path: '/o-que-uso',
+  //   icon: <TiDeviceDesktop size={20} />,
+  //   activeIcon: <TiDeviceLaptop size={20} />,
+  // },
   // {
   //   title: 'Projetos',
   //   path: '/projetos',
+  //   icon: <TiHomeOutline size={20} />,
+  //   activeIcon: <TiHome size={20} />,
   // },
   // {
   //   title: 'Portfolio',
   //   path: '/portfolio',
+  //   icon: <TiHomeOutline size={20} />,
+  //   activeIcon: <TiHome size={20} />,
   // },
   {
     title: 'Contato',
     path: '/contato',
+    icon: <TiMessage size={20} />,
+    activeIcon: <TiMessages size={20} />,
   },
 ];
 
 export function Document({ children, gaId, lang = 'pt-br', title }: DocumentProps): React.ReactElement {
   const [loading, setLoading] = React.useState(false);
   const transition = useTransition();
-  // note: use `export const handle = { hydrate: true };` in any route to enable JS
-  // const includeScripts = useShouldHydrate();
   const matches = useMatches();
   const match = matches.find(match => match.data && match.data.seo);
   const seo: SEO = match?.data?.seo;
@@ -123,7 +154,6 @@ export function Document({ children, gaId, lang = 'pt-br', title }: DocumentProp
         <EasterEgg />
         <ScrollRestoration />
         <Scripts />
-        {/* {includeScripts && <Scripts />} */}
         {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
     </html>
