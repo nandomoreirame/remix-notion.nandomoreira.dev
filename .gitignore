@@ -9,5 +9,6 @@ node_modules
 /public/build
 /api
 /app/ui/styles/css/
+/app/ui/styles/_tmp/
 /css/
 !.vscode

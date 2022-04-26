@@ -1,18 +1,18 @@
-/*
- Usage
+// /*
+//  Usage
 
-.container {
-  width: 1200px;
+// .container {
+//   width: 1200px;
 
-  @include media(min-width 480px) {
-    font-size: 1.2rem;
-  }
+//   @include media(min-width 480px) {
+//     font-size: 1.2rem;
+//   }
 
-  @include media(max-width 1200px) {
-    width: 700px;
-  }
-}
-*/
+//   @include media(max-width 1200px) {
+//     width: 700px;
+//   }
+// }
+// */
 
 $default-feature: max-width;
 

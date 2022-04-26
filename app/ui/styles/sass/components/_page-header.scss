@@ -52,18 +52,19 @@
   }
 
   &__image {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     bottom: 0;
+    filter: blur(2px);
     height: 100%;
     left: 0;
-    opacity: 0.2;
+    opacity: 0.4;
     pointer-events: none;
     position: absolute;
     right: 0;
     top: 0;
     width: 100%;
     z-index: 1;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
   }
 }

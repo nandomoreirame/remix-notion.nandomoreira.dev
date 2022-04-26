@@ -3,3 +3,5 @@ build
 public
 .cache
 .vercel
+/app/ui/styles/css/
+/app/ui/styles/_tmp/
